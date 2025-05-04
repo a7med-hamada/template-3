@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font PT+Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- tailwindcss -->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <!-- flowbite -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+</head>
+<body class="bg-gray-300">
+
+<!-- Navbar -->
+<div class="bg-gray-600/90 fixed z-50 w-[100%]">
+<nav class="container mx-auto px-4 p-3 flex flex-wrap items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#" class="text-white text-lg font-bold h-[100%]"><img class="h-[75px]" src="imgs/logo.png" alt=""></a>
+
+    <!-- Hamburger Menu Button -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+    <label for="menu-toggle" class="text-white md:hidden cursor-pointer flex justify-between">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </label>
+
+    <!-- Main Menu -->
+    <div class="hidden peer-checked:flex flex-col md:flex md:flex-row md:items-center md:space-x-4 space-x-reverse md:space-x-reverse w-full md:w-auto mt-4 md:mt-0">
+
+      <a href="#" class="text-white mb-2 mr-6 md:mb-0">Home</a>
+      <a href="#" class="text-white mb-2 mr-6 md:mb-0">Heritage paintings</a>
+
+      <!-- Dropdown -->
+      <div class="relative group">
+        <button class="text-white flex items-center gap-1">
+          Latest paintings
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <!-- Dropdown Menu -->
+        <div class="absolute hidden group-hover:block bg-white   rounded-md shadow-lg mt-2 p-2">
+          <a href="#" class="block px-4 py-2 w-24 hover:bg-gray-100">painting 1</a>
+          <a href="#" class="block px-4 py-2 w-24 hover:bg-gray-100">painting 2</a>
+          <a href="#" class="block px-4 py-2 w-24 hover:bg-gray-100">painting 3</a>
+        </div>
+      </div>
+
+      <a href="#" class="text-white mb-2 md:mb-0">together</a>
+
+      <!-- Search and Login -->
+<form action="index.html" class="flex sm:flex-row flex-col gap-2 sm:gap-4 items-center">
+  <input type="text" placeholder="Search here..." class="px-4 py-2 border border-gray-300 rounded-md w-full sm:w-auto">
+  <button class="bg-transparent text-white px-4 py-2 border border-gray-300 rounded-md w-full sm:w-auto hover:bg-gray-400/90 transition-all duration-300">
+    Search
+  </button>
+</form>
+
+<!-- زر تسجيل الدخول -->
+<label for="login-modal" class="bg-transparent text-white border border-gray-300 px-4 py-2 rounded-md cursor-pointer w-full md:w-auto text-center sm:mt-6 mt-4 lg:mt-0 mt-0 hover:bg-gray-400/90 transition-all duration-300">
+  log in
+</label>
+<!-- Hidden checkbox -->
+<input type="checkbox" id="login-modal" class="peer hidden">
+
+<!-- Modal -->
+<div class="fixed inset-0 bg-black bg-opacity-50 hidden peer-checked:flex items-center justify-center transition">
+<div class="bg-white rounded-lg p-10 w-[90%] max-w-2xl relative animate-scale">
+
+    <!-- زر إغلاق -->
+    <label for="login-modal" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 cursor-pointer text-3xl">&times;</label>
+
+    <h3 class="text-2xl font-bold mb-6 text-center">log in</h3>
+
+    <form action="index.html" class="space-y-4">
+      <input type="email" placeholder="email" class="w-full text-lg   p-3 border rounded-md">
+      <input type="password" placeholder="password" class="w-full text-lg   p-3 border rounded-md">
+      
+      <div class="text-right text-sm mb-2">
+        <a href="#" class="text-blue-500 underline">forget password?</a>
+      </div>
+
+      <div class="flex items-center gap-2 text-sm text-gray-700 mb-4">
+        <input type="checkbox" class="w-4 h-4">
+        <label>Remind me</label>
+      </div>
+
+      <button class="bg-green-500 text-white w-full py-3 rounded-md text-lg">log in</button>
+    </form>
+
+    <div dir="rtl" class="text-center text-sm   mt-4">
+      Don't have an account?
+      <a href="#" class="text-blue-500 underline">Create a new account</a>
+    </div>
+  </div>
+</div>
+    </div>
+  </nav>
+</div>
+<!-- /////////////////////////icons////////////////////////// -->
+<div class="fixed top-2/4 right-0 p-4 z-50 text-white ">
+    <a href="#" class="text-2xl border-2 text-white border-gray-800 block w-10 text-center rounded-md p-1 hover:bg-gray-700 hover:border-white  transition-all duration-300"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#" class="my-3 text-2xl border-2 text-white border-gray-800 block w-10 text-center rounded-md p-1 hover:bg-gray-700 hover:border-white transition-all duration-300"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#" class="text-2xl border-2 text-white border-gray-800 block w-10 text-center rounded-md p-1 hover:bg-gray-700 hover:border-white transition-all duration-300 "><i class="fa-brands fa-instagram"></i></a>
+</div>
+<!-- ///////////////////////futshar////////////////////////// -->
+
+<div class="pt-[100px] relative w-full h-[100vh] bg-[url(imgs/background-futshar.jpg)] bg-cover bg-center flex items-center justify-center">
+  <!-- تكتب الكلام هنا -->
+  <div class="text-center text-white px-4">
+    <h1 class="text-4xl font-bold mb-4">The Soul of the Painting</h1>
+    <p class="text-lg my-3">Where the soul lives in colors</p>
+    <button class="bg-transparent border-2 w-32 p-2 rounded-lg border-gray-800 text-white hover:text-white hover:bg-gray-800 transition-all duration-300">Explore more</button>
+  </div>
+</div>
+<!-- /////////////////////////slider//////////////////////// -->
+   <h1 class="text-center text-4xl font-bold mt-16 mb-8">Discover the paintings</h1>
+<div id="controls-carousel" class="relative w-[80%] my-8 mx-auto" data-carousel="static">
+  <!-- Carousel wrapper -->
+  <div class="relative w-full aspect-[16/9] h-[70vh] rounded-lg overflow-hidden slider">
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="imgs/An-artistic painting.jpg" class="absolute block w-full h-full object-cover bg-center" alt="...">
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cente text-white text-center">
+      <h4 class="text-3xl font-bold">Guernica</h4>
+      <p class="mb-1">Pablo Picasso</p>
+      <button class="w-32 rounded-md text-white p-2 border-2 border-gray-800 hover:bg-gray-900/80 transition-all duration-300">More details</button>
+      </div>
+    </div>
+    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+      <img src="imgs/An artistic painting2.jpeg" class="absolute block w-full h-full object-cover" alt="...">
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cente text-white text-center">
+      <h4 class="text-3xl font-bold">Mona Lisa</h4>
+      <p class="mb-1">Leonardo da Vinci</p>
+      <button class="w-32 rounded-md text-white p-2 border-2 border-gray-800 hover:bg-gray-900/80 transition-all duration-300">More details</button>
+      </div>
+    </div>
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="imgs/An artistic painting3.jpg" class="absolute block w-full h-full object-cover" alt="...">
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cente text-white text-center">
+      <h4 class="text-3xl font-bold">The Nightmare</h4>
+      <p class="mb-1">Henry Fuseli</p>
+      <button class="w-32 rounded-md text-white p-2 border-2 border-gray-800 hover:bg-gray-900/80 transition-all duration-300">More details</button>
+      </div>
+    </div>
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="imgs/An artistic painting4.jpg" class="absolute block w-full h-full object-cover bg-center" alt="...">
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cente text-white text-center">
+      <h4 class="text-3xl font-bold">The Scream</h4>
+      <p class="mb-1">Edvard Munch</p>
+      <button class="w-32 rounded-md text-white p-2 border-2 border-gray-800 hover:bg-gray-900/80 transition-all duration-300">More details</button>
+      </div>
+    </div>
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="imgs/An artistic painting5.jpg" class="absolute block w-full h-full object-cover" alt="...">
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cente text-white text-center">
+      <h4 class="text-3xl font-bold">The Last Supper</h4>
+      <p class="mb-1">Leonardo da Vinci</p>
+      <button class="w-32 rounded-md text-white p-2 border-2 border-gray-800 hover:bg-gray-900/80 transition-all duration-300">More details</button>
+      </div>
+    </div>
+  </div>
+  <!-- Slider controls -->
+   <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-prev>
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full">
+      <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+      </svg>
+      <span class="sr-only">Previous</span>
+    </span>
+  </button>
+  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group" data-carousel-next>
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full">
+      <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+      </svg>
+      <span class="sr-only">Next</span>
+    </span>
+  </button>
+</div>
+  <!-- //////////////////items////////////////////// -->
+   <div class="container m-auto my-24">
+    <div class="flex justify-between items">
+
+      <div class="w-[30%] h-[480px] mb-5 text-center relative bg-[url(/imgs/xK1XD517zet4x2LSyXYFZkiV24aKSuqR5ieHjawT.jpg)] bg-cover bg-center item shadow-[0px_10px_20px_4px_black]">
+        <div class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cente text-white w-[100%]">
+          <h2 class="text-2xl font-bold">The Starry Night</h2>
+          <p>Vincent van Gogh</p>
+          <button class="w-32 rounded-lg p-2 bg-slate-500">More details</button>
+        </div>
+      </div>  
+
+      <div class="w-[30%] h-[480px] mb-5 text-center relative bg-[url('/imgs/71bnVJKGMjL._AC_UF1000,1000_QL80_.jpg')] bg-cover bg-center item shadow-[0px_10px_20px_4px_black]">
+        <div class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cente text-white w-[100%]">
+          <h2 class="text-2xl font-bold">Homage to the Square</h2>
+          <p>Josef Albers</p>
+          <button class="w-32 rounded-lg p-2 bg-slate-500">More details</button>
+        </div>
+      </div>  
+    
+      <div class="w-[30%] h-[480px] mb-5 text-center relative bg-[url('/imgs/5050843.jpeg')] bg-cover bg-center rounded-[20px 0] item shadow-[0px_10px_20px_4px_black]">
+        <div class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cente text-white w-[100%]">
+          <h2 class="text-2xl font-bold">Girl with a Pearl Earring</h2>
+          <p>Johannes Vermeer</p>
+          <button class="w-32 rounded-lg p-2 bg-slate-500">More details</button>
+        </div>
+      </div> 
+
+    </div>
+   </div>
+   <!-- //////////////////////// questions ///////////////////////// -->
+    <div class="questions h-[70vh] mb-11">
+      <div class="home w-[100%] h-[100%] flex items-center">
+      <div class="w-full h-[50vh] bg-[url(imgs/background-accordion.jpg)] bg-cover bg-fixed">
+<div class="w-full h-[50vh] flex justify-center items-center">
+  <div class="w-[80%] accordion-1 rounded-xl overflow-hidden">
+    <div id="accordion-arrow-icon" data-accordion="collapse">
+
+      <!-- Accordion Item 1 -->
+      <h2 id="accordion-arrow-icon-heading-1">
+        <button type="button"
+          class="accordion-button flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-800 bg-transparent border-8 border-b-0 border-gray-200 dark:border-gray-700 dark:text-white gap-3 focus:outline-none focus:ring-0 transition-colors duration-300"
+          data-accordion-target="#accordion-arrow-icon-body-1"
+          aria-expanded="false"
+          aria-controls="accordion-arrow-icon-body-1">
+          <span>What is the purpose of a painting?</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5 5 1 1 5" />
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-arrow-icon-body-1" class="hidden" aria-labelledby="accordion-arrow-icon-heading-1">
+        <div class="p-3 border-4 border-b-0 border-gray-200 text-white dark:border-gray-700">
+          <p>To express emotions, ideas, or tell a story through visual elements.</p>
+        </div>
+      </div>
+
+      <!-- Accordion Item 2 -->
+      <h2 id="accordion-arrow-icon-heading-2">
+        <button type="button"
+          class="accordion-button flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-800 bg-transparent border-8 border-b-0 border-gray-200 dark:border-gray-700 dark:text-white gap-3 focus:outline-none focus:ring-0 transition-colors duration-300"
+          data-accordion-target="#accordion-arrow-icon-body-2"
+          aria-expanded="false"
+          aria-controls="accordion-arrow-icon-body-2">
+          <span>What materials are commonly used in paintings?</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5 5 1 1 5" />
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-arrow-icon-body-2" class="hidden" aria-labelledby="accordion-arrow-icon-heading-2">
+        <div class="p-3 border-4 border-b-0 border-gray-200 dark:border-gray-700 text-white">
+          <p>Paint, canvas, brushes, and sometimes mixed media like charcoal or ink.</p>
+        </div>
+      </div>
+
+      <!-- Accordion Item 3 -->
+      <h2 id="accordion-arrow-icon-heading-3">
+        <button type="button"
+          class="accordion-button flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-800 bg-transparent border-8 border-gray-200 dark:border-gray-700 dark:text-white gap-3 focus:outline-none focus:ring-0 transition-colors duration-300"
+          data-accordion-target="#accordion-arrow-icon-body-3"
+          aria-expanded="false"
+          aria-controls="accordion-arrow-icon-body-3">
+          <span>What makes a painting valuable?</span>
+          <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5 5 1 1 5" />
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-arrow-icon-body-3" class="hidden" aria-labelledby="accordion-arrow-icon-heading-3">
+        <div class="p-3 text-white border-4 border-gray-200 dark:border-gray-700">
+          <p>Its uniqueness, artist’s reputation, historical importance, and visual impact.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    <!-- /////////////////////////////////////////// -->
+     <div class="container mx-auto ">
+      <h1 class="text-center text-4xl font-bold mb-12">The most famous painters</h1>
+      <div class="flex justify-between Painters mb-24">
+        <div style="background-image: url(imgs/Leonardo\ da\ Vinci.jpg);" class="w-[30%] h-[500px] bg-zinc-700 bg-cover rounded-lg relative img-Painters hover:-translate-y-2 transition-transform duration-300 shadow-[0px_10px_20px_4px_black]">
+          <div class="content-Painters absolute bottom-[-50px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-slate-400">
+            <img class="w-20 h-20 rounded-[50%] border-2 border-white mx-auto" src="imgs/Leonardo da Vinci.jpg" alt="">
+            <h1 class="text-xl font-bold text-white">Leonardo da Vinci</h1>
+            <p class="text-center">Professional painter</p>
+            <p class="text-center">April 15, 1452</p>
+          </div>
+        </div>
+        <div style="background-image: url(imgs/Pablo\ Picasso.jpg);" class="w-[30%] h-[500px] bg-zinc-700 bg-cover rounded-lg relative img-Painters hover:-translate-y-2 transition-transform duration-300 shadow-[0px_10px_20px_4px_black]">
+          <div class="content-Painters absolute bottom-[-50px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center text-slate-300">
+          <img class="w-20 h-20 rounded-[50%] border-2 border-white mx-auto" src="imgs/Pablo Picasso.jpg" alt="">
+          <h1 class="text-xl font-bold text-white">Pablo Picasso</h1>
+          <p class="text-center">Professional painter</p>
+          <p class="text-center">October 25, 1881</p>
+          </div>
+        </div>
+        <div style="background-image: url(imgs/Vincent\ van\ Gogh.jpg);" class="w-[30%] h-[500px] bg-zinc-700 bg-cover rounded-lg relative img-Painters hover:-translate-y-2 transition-transform duration-300 shadow-[0px_10px_20px_4px_black]">
+          <div class="content-Painters absolute bottom-[-50px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-slate-400">
+          <img class="w-20 h-20 rounded-[50%] border-2 border-white mx-auto" src="imgs/Vincent van Gogh.jpg" alt="">
+          <h1 class="text-xl font-bold text-white">Vincent van Gogh</h1>
+          <p class="text-center">Professional painter</p>
+          <p class="text-center">March 30, 1853</p>
+          </div>
+        </div>
+      </div>
+     </div>
+     <!-- //////////////////////////////////////// -->
+      <h1 class="text-center mb-8 text-3xl font-bold">The most expensive paintings</h1>
+      <div class="container mx-auto">
+        <div class="flex expensive w-full bg-gray-400 overflow-hidden mb-16  border-r-8 border-gray-700 rounded-bl-[35%] hover:-translate-y-2 hover:opacity-90 transition-all duration-300 shadow-[0px_10px_20px_4px_black]">
+          <img class="h-[350px] w-[30%] overflow-hidden img-expensive" src="imgs/Salvator-Mundi.jpg" alt="">
+          <div class="content p-9">
+          <h1 class="text-3xl font-bold mb-5">Salvator Mundi<h1>
+          <p class="mb-5">Year of drawing: around 1500 AD</p>
+          <P class="font-bold">This painting depicts Jesus Christ as the savior of the world, and is considered one of the most remarkable works of art to have been rediscovered in modern times.</P>
+         <div class="flex justify-between w-64 mt-5 characteristic">
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-14 text-white">Old</p>
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-24 text-white">Expensive</p>
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-20 text-white">Antique</p>                        
+          </div>
+          </div>
+        </div>
+        <div class="flex expensive w-full bg-gray-400 overflow-hidden mb-16  border-r-8 border-gray-700 rounded-bl-[35%] hover:-translate-y-2 hover:opacity-90 transition-all duration-300 shadow-[0px_10px_20px_4px_black]">
+          <img class="h-[350px] w-[30%] overflow-hidden img-expensive" src="imgs/Interchange.jpg" alt="">
+          <div class="content p-9">
+          <h1 class="text-3xl font-bold mb-3">Interchange<h1>
+          <p class="mb-5">Year of drawing: 1955</p>
+          <p class="font-bold">An abstract painting from 1955, showing de Kooning's shift from depicting women to landscapes.</p>
+         <div class="flex justify-between w-64 mt-5 characteristic">
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-14 text-white">Old</p>
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-24 text-white">Expensive</p>
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-20 text-white">Antique</p>                        
+          </div>
+          </div>
+        </div>
+        <div class="flex expensive w-full bg-gray-400 overflow-hidden mb-16  border-r-8 border-gray-700 rounded-bl-[35%] hover:-translate-y-2 hover:opacity-90 transition-all duration-300 shadow-[0px_10px_20px_4px_black]">
+          <img class="h-[350px] w-[30%] overflow-hidden img-expensive" src="imgs/The-Card-Players.jpg" alt="">
+          <div class="content p-9">
+          <h1 class="text-3xl font-bold mb-3">The Card Players<h1>
+          <p class="mb-5">Year of drawing: 1892–1893</p>
+          <p class="font-bold">One of a series of paintings depicting card players, considered a pillar of modern art.</p>
+          <div class="flex justify-between w-64 mt-5 characteristic">
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-14 text-white">Old</p>
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-24 text-white">Expensive</p>
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-20 text-white">Antique</p>                        
+          </div>
+          </div>
+        </div>
+        <div class="flex expensive w-full bg-gray-400 overflow-hidden border-r-8 border-gray-700 rounded-bl-[35%] hover:-translate-y-2 hover:opacity-90 transition-all duration-300 shadow-[0px_10px_20px_4px_black]">
+          <img class="h-[350px] w-[30%] overflow-hidden img-expensive" src="imgs/Nafea-Faa-Ipoipo.jpg" alt="">
+          <div class="content p-9">
+          <h1 class="text-3xl font-bold mb-3">Nafea Faa Ipoipo<h1>
+          <p class="mb-5">Year of drawing: 1892</p>
+          <p class="font-bold">This painting depicts two Tahitian women, and reflects Gauguin's influence by Polynesian cultures.</p>
+         <div class="flex justify-between w-64 mt-5 characteristic">
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-14 text-white">Old</p>
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-24 text-white">Expensive</p>
+            <p class="p-1 bg-slate-700 text-center rounded-lg w-20 text-white">Antique</p>                                             
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- ////////////////////////////// -->
+       <div class="container mx-auto mt-20">
+        <h1 class="text-center text-4xl font-bold mb-8">Contact us</h1>
+        <div class="w-full flex justify-between social-networking">
+          <div class="p-3 bg-zinc-600 w-[24%] rounded-lg shadow-[0px_10px_20px_4px_black] hover:-translate-y-2 hover:opacity-90 transition-all duration-300 content-social">
+            <a href="#"><i class="fa-brands fa-whatsapp p-2 bg-slate-100 text-2xl rounded-lg w-12 text-center"></i></a>
+            <span class="text-white">Contact us on WhatsApp</span>
+          </div>
+          <div class="p-3 bg-zinc-600 w-[24%] rounded-lg shadow-[0px_10px_20px_4px_black] hover:-translate-y-2 hover:opacity-90 transition-all duration-300 content-social">
+            <a href="#"><i class="fa-brands fa-twitter p-2 bg-slate-100 text-2xl rounded-lg w-12 text-center"></i></a>
+            <span class="text-white">Contact us on WhatsApp</span>
+          </div>
+          <div class="p-3 bg-zinc-600 w-[24%] rounded-lg shadow-[0px_10px_20px_4px_black] hover:-translate-y-2 hover:opacity-90 transition-all duration-300 content-social">
+            <a href="#"><i class="fa-brands fa-linkedin p-2 bg-slate-100 text-2xl rounded-lg w-12 text-center"></i></a>
+            <span class="text-white">Contact us on WhatsApp</span>
+          </div>
+          <div class="p-3 bg-zinc-600 w-[24%] rounded-lg shadow-[0px_10px_20px_4px_black] hover:-translate-y-2 hover:opacity-90 transition-all duration-300 content-social">
+            <a href="#"><i class="fa-brands fa-instagram p-2 bg-slate-100 text-2xl rounded-lg w-12 text-center"></i></a>
+            <span class="text-white">Contact us on WhatsApp</span>
+          </div>
+        </div>
+       </div>
+       <!-- //////////////////////////// -->
+        <div class="footer bg-gray-400 w-full min-h-[300px] mt-20">
+          <div class="container mx-auto">
+            <div class="flex justify-between h-full text-white p-10 content-footer">
+
+              <div class="w-[30%] h-[100%] part-footer">
+                <div class="flex items-center title-footer">
+                <img class="h-[100px]" src="imgs/logo.png" alt="">
+                <span class="text-2xl font-bold">The Soul of the Painting</span>
+                </div>
+                <p class="my-3"><span class="font-bold">phone</span>: 010-000-000</p>
+                <p class="my-3"><span class="font-bold">Address</span>: Egypt</p>
+                <p><span class="font-bold">Email</span>: a7md@gmail.com</p>
+              </div>
+
+              <div class="w-[30%] part-footer mt-8 ">
+                <h1 class="text-3xl font-bold">Important links</h1>
+                <p class="my-4">explore</p>
+                <p class="mb-4">learn more</p>
+                <p class="">Your intelligence is important to us.</p>
+              </div>
+
+              <div class="w-[30%] part-footer mt-8">
+                <h1 class="text-3xl font-bold">Important links</h1>
+                <p class="my-4">All paintings</p>
+                <p class="mb-4">The most expensive paintings</p>
+                <p class="">The most famous painters</p>
+              </div>
+
+            </div>
+          </div>
+         <div class="Copyright bg-gray-800 text-white text-center p-4">All rights reserved &copy; 2024</div>
+        </div>
+     <!-- ///////////////////////////////// -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
